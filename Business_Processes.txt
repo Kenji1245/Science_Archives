@@ -1,0 +1,172 @@
+/ * User can view list of items avaiable on the database. The SQL statement below shows that the database can view a list of journal articles, books, conference papers and thesis avaiable. */
+/* Users can view list of journal articles available */
+
+SELECT journal_article.journal_article_title,journal_article.journal_title,item.Publication_type,item.hyperlink,item.publication_year
+FROM item
+INNER JOIN journal_article
+ON item.item_id = journal_article.item_id
+
+/* Users can view list of books available */
+
+SELECT book.book_title,item.Publication_type,item.hyperlink,item.publication_year
+FROM item
+INNER JOIN book
+ON item.item_id = book.item_id
+
+/* User can view list of conference papers avaiable */
+
+SELECT conference_paper.conference_paper_title,conference_paper.conference_title,item.Publication_type,item.hyperlink,item.publication_year
+FROM item
+INNER JOIN conference_paper
+ON item.item_id = conference_paper.item_id
+
+/* User can view list of thesis avaiable */
+
+SELECT thesis.thesis_title,thesis.type_of_thesis,item.Publication_type,item.hyperlink,item.publication_year
+FROM item
+INNER JOIN thesis
+ON item.item_id = thesis.item_id
+
+/* User can view additional information on items. The SQL statement below shows a list of items avaiable. */
+/* User can view additional information on thesis */
+
+SELECT thesis.thesis_title,thesis.type_of_thesis,thesis.academic_institution,item.avg_score,item.publisher_name,item.publication_year,item.Publication_type,item.hyperlink
+FROM thesis
+INNER JOIN item
+ON thesis.item_id = item.item_id
+
+/* User can view additional information on journal article */
+
+SELECT journal_article.journal_article_title,journal_article.journal_title,journal_article.article_first_page_number,journal_article.article_last_page_number,journal_article.volume_number,journal_article.journal_article_abstract,item.avg_score,item.publisher_name,item.publication_year,item.Publication_type,item.hyperlink
+FROM journal_article
+INNER JOIN item
+ON journal_article.item_id = item.item_id
+
+/* User can view additional information on book */
+
+SELECT book.book_title,book.series_title,book.edition,book.publication_place,book.series_number,item.avg_score,item.publisher_name,item.publication_year,item.Publication_type,item.hyperlink
+FROM book
+INNER JOIN item
+ON book.item_id = item.item_id
+
+/* User can view additional information on conference paper */
+
+SELECT conference_paper.conference_paper_title,conference_paper.conference_title,conference_paper.publication_place,conference_paper.page_number,conference_paper.conference_paper_abtract,item.avg_score,item.publisher_name,item.publication_year,item.Publication_type,item.hyperlink
+FROM conference_paper
+INNER JOIN item
+ON conference_paper.item_id = item.item_id
+
+
+/* The database can recommend users items based on their scientifc interest The SQL statement below how this is done for each item.*/
+/* Recommending journal articles to users based on their scientific interest. */
+
+SELECT nuser.first_name,nuser.middle_name,nuser.last_name,subject.subject,item.avg_score,item.publication_year,item.hyperlink,journal_article.journal_article_title
+FROM nuser
+INNER JOIN user_subject_interest
+ON nuser.user_id = user_subject_interest.user_id
+INNER JOIN subject
+ON user_subject_interest.subject_id=subject.subject_id
+INNER JOIN subject_item_relation
+ON subject.subject_id=subject_item_relation.subject_id
+INNER JOIN item
+ON subject_item_relation.item_id=item.item_id
+INNER JOIN journal_article
+ON item.item_id=journal_article.item_id
+
+/* Recommending books to users based on their scientific interest. */
+
+SELECT nuser.first_name,nuser.middle_name,nuser.last_name,subject.subject,item.avg_score,item.publication_year,item.hyperlink,book.book_title
+FROM nuser
+INNER JOIN user_subject_interest
+ON nuser.user_id = user_subject_interest.user_id
+INNER JOIN subject
+ON user_subject_interest.subject_id=subject.subject_id
+INNER JOIN subject_item_relation
+ON subject.subject_id=subject_item_relation.subject_id
+INNER JOIN item
+ON subject_item_relation.item_id=item.item_id
+INNER JOIN book
+ON item.item_id=book.item_id
+
+/* Recommending conference papers to users based on their scientific interest. */
+
+SELECT nuser.first_name,nuser.middle_name,nuser.last_name,subject.subject,item.avg_score,item.publication_year,item.hyperlink,conference_paper.conference_paper_title
+FROM nuser
+INNER JOIN user_subject_interest
+ON nuser.user_id = user_subject_interest.user_id
+INNER JOIN subject
+ON user_subject_interest.subject_id=subject.subject_id
+INNER JOIN subject_item_relation
+ON subject.subject_id=subject_item_relation.subject_id
+INNER JOIN item
+ON subject_item_relation.item_id=item.item_id
+INNER JOIN conference_paper
+ON item.item_id=conference_paper.item_id
+
+/* Recommending journal articles to users based on their scientific interest. */
+
+SELECT nuser.first_name,nuser.middle_name,nuser.last_name,subject.subject,item.avg_score,item.publication_year,item.hyperlink,journal_article.journal_article_title
+FROM nuser
+INNER JOIN user_subject_interest
+ON nuser.user_id = user_subject_interest.user_id
+INNER JOIN subject
+ON user_subject_interest.subject_id=subject.subject_id
+INNER JOIN subject_item_relation
+ON subject.subject_id=subject_item_relation.subject_id
+INNER JOIN item
+ON subject_item_relation.item_id=item.item_id
+INNER JOIN journal_article
+ON item.item_id=journal_article.item_id
+
+/* The database can show items to users that they have already read, inlcuding various other information regarding such item */
+/* Showing thesis to users that they have already read, including the hyperlink and average score and reviews. */
+
+SELECT nuser.first_name,nuser.middle_name,nuser.last_name,item.avg_score,item.Publication_type,thesis.thesis_title,item.hyperlink,item_library.read_date
+FROM nuser
+INNER JOIN item_library
+ON nuser.user_id = item_library.user_id
+INNER JOIN item
+ON item_library.item_id = item.item_id
+INNER JOIN thesis
+ON item.item_id = thesis.item_id
+
+/* Showing books to users that they have already read, including the hyperlink and average score and reviews. */
+
+SELECT nuser.first_name,nuser.middle_name,nuser.last_name,item.avg_score,item.Publication_type,book.book_title,book.publication_place,item.hyperlink,item_library.read_date
+FROM nuser
+INNER JOIN item_library
+ON nuser.user_id = item_library.user_id
+INNER JOIN item
+ON item_library.item_id = item.item_id
+INNER JOIN book
+ON item.item_id = book.item_id
+
+/* Showing journal article to users that they have already read, including the hyperlink and average score and reviews. */
+
+SELECT nuser.first_name,nuser.middle_name,nuser.last_name,item.avg_score,item.Publication_type,journal_article.journal_article_title,journal_article.journal_title,item.hyperlink,item_library.read_date
+FROM nuser
+INNER JOIN item_library
+ON nuser.user_id = item_library.user_id
+INNER JOIN item
+ON item_library.item_id = item.item_id
+INNER JOIN journal_article
+ON item.item_id = journal_article.item_id
+
+
+/* Shows conference paper and their average score in descending order */
+
+SELECT conference_paper.conference_paper_title,item.avg_score,item.hyperlink
+FROM item
+INNER JOIN conference_paper
+ON conference_paper.item_id = item.item_id
+ORDER BY item.avg_score DESC
+
+/* Shows author rating in descending order. In addition, the table shows the names of users who rated and reviewed authors. */ 
+
+SELECT nuser.first_name,nuser.middle_name,nuser.last_name,user_review_author.author_rating,user_review_author.author_review_text,author.author_first_name,author.author_last_name
+FROM nuser
+INNER JOIN user_review_author
+ON nuser.user_id = user_review_author.user_id
+INNER JOIN author
+ON user_review_author.author_names_id = author.author_names_id
+ORDER BY user_review_author.author_rating DESC

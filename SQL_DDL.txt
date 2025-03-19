@@ -1,0 +1,196 @@
+/* creates a table with author as the entity name. Attributes include the author name ID as a primary key, author's first name and last name. */
+
+CREATE TABLE author (
+    author_names_id INT(5) NOT NULL,
+    author_first_name VARCHAR(100),
+    author_last_name VARCHAR(100),
+    PRIMARY KEY(author_names_id)
+    );
+
+/* creates a table with editor as the entity name. Attributes include the editor name ID as a primary key and editor's name. */
+
+
+CREATE TABLE editor (
+    editor_names_id INT(5) NOT NULL,
+    editor_name VARCHAR(100) NOT NULL UNIQUE,
+    
+    PRIMARY KEY(editor_names_id)
+    );
+
+/* creates a table with subject as the entity name. Attributes include the subject ID as a primary key and editor's name. */
+
+CREATE TABLE subject (
+    subject_id INT(5) NOT NULL,
+    subject VARCHAR(100) NOT NULL UNIQUE,
+    
+    PRIMARY KEY(subject_id)
+    );
+
+/* creates a table with item as the entity name. Attributes include the item ID as a primary key, average score, publisher's name, year of publication, hyperlink to source of item and pulication type. */
+
+CREATE TABLE item (
+    item_id INT(5) NOT NULL,
+    avg_score DECIMAL(4,2),
+    publisher_name VARCHAR(50),
+    publication_year INT(4),
+    hyperlink VARCHAR(200),
+    Publication_type ENUM('journal_article','conference_paper','book','thesis'),
+    
+    PRIMARY KEY(item_id)
+    );
+
+/* creates a table with nuser as the entity name. Attributes include the user ID as a primary key, first name, middle name, last name, email, phone number, contact preference, username and password. */
+
+CREATE TABLE nuser (
+    user_id INT(5) NOT NULL,
+    first_name VARCHAR(20) NOT NULL,
+    middle_name VARCHAR(20),
+    last_name VARCHAR(20),
+    email VARCHAR(50),
+    phone_no INT(11),
+    contact_preference ENUM('phone','email','both'),
+    username VARCHAR(50) UNIQUE,
+    password VARCHAR(50),
+    
+    PRIMARY KEY(user_id)
+    );
+
+/* creates a table with journal article as the entity name. Attributes include the item ID as a primary key, journal article title, journal article, article first page number, article last page number, volume number and journal article abstract */
+
+CREATE TABLE journal_article (
+    item_id INT(5) NOT NULL,
+    journal_article_title VARCHAR(100) NOT NULL UNIQUE,
+    journal_title VARCHAR(100) NOT NULL,
+    article_first_page_number INT(8),
+    article_last_page_number INT(8),
+    volume_number INT(10),
+    journal_article_abstract TEXT,
+    
+    PRIMARY KEY(item_id),
+    FOREIGN KEY(item_id) REFERENCES item(item_id)
+);
+
+
+/* creates a table with conference paper as the entity name. Attributes include the user ID as a primary key, conference paper title, publication place and page number */
+
+);
+
+CREATE TABLE conference_paper (
+    item_id INT(5) NOT NULL,
+    conference_paper_title VARCHAR(100) NOT NULL UNIQUE,
+    conference_title VARCHAR(100),
+    publication_place VARCHAR(100),
+    page_number INT(10),
+    conference_paper_abstract TEXT,
+    
+    PRIMARY KEY(item_id),
+    FOREIGN KEY(item_id) REFERENCES item(item_id)
+);
+
+/* creates a table with book as the entity name. Attributes include the user ID as a primary key, book title, series number, editon, publication place and book abtract */
+
+CREATE TABLE book (
+    item_id INT(5) NOT NULL,
+    book_title VARCHAR(100) NOT NULL UNIQUE,
+    series_title VARCHAR(50),
+    series_number INT(3),
+    edition VARCHAR(50),
+    publication_place VARCHAR(50),
+    book_abstract TEXT,
+
+    PRIMARY KEY(item_id),
+    FOREIGN KEY(item_id) REFERENCES item(item_id)
+);
+
+/* creates a table with book as the entity name. Attributes include the user ID as a primary key, thesis title, type of thesis, academic institution and thesis abstract. */
+
+    
+CREATE TABLE thesis (
+    item_id INT(5) NOT NULL,
+    thesis_title VARCHAR(100) NOT NULL UNIQUE,
+    type_of_thesis VARCHAR(100) NOT NULL,
+    academic_institution VARCHAR(50),
+    thesis_abstract TEXT,
+    
+    PRIMARY KEY(item_id),
+    FOREIGN KEY(item_id) REFERENCES item(item_id)
+);
+
+/* creates a table with editor_item as the entity name. Attributes include the editor_item_id as a primary key, item_id and editor_names_id as foreign key. This table represents a many to many relationship between two entities. */
+
+CREATE TABLE editor_item(
+    editor_item_id INT(5),
+    item_id INT(5) NOT NULL,
+    editor_names_id INT(5) NOT NULL,
+
+	PRIMARY KEY(editor_item_id),
+	FOREIGN KEY(item_id) REFERENCES item(item_id),
+	FOREIGN KEY(editor_names_id) REFERENCES editor(editor_names_id)
+    );
+
+/* creates a table with user_subject_interest as the entity name. Attributes include the user_subject_interest_id as a primary key, user_id and subject_id as foreign key. This table represents a many to many relationship between two entities. */
+
+CREATE TABLE user_subject_interest (
+    user_subject_interest_id INT(5) NOT NULL,
+    user_id INT(5) NOT NULL,
+    subject_id INT(5) NOT NULL,
+    
+    PRIMARY KEY(user_subject_interest_id),
+    FOREIGN KEY(user_id) REFERENCES nuser(user_id),
+    FOREIGN KEY(subject_id) REFERENCES subject(subject_id)
+);
+
+/* creates a table with author_item as the entity name. Attributes include the author_item_id as a primary key, author_names_id and item_id as foreign key. This table represents a many to many relationship between two entities. */
+
+CREATE TABLE author_item (
+    author_item_id INT(5) NOT NULL,
+    author_names_id INT(5) NOT NULL,
+    item_id INT(5) NOT NULL,
+
+PRIMARY KEY(author_item_id)
+    );
+
+/* creates a table with review as the entity name. Attributes include the review_id as a primary key, user_id and item_id as foreign key. In addition attributes include rating and review_text. This table represents a many to many relationship between two entities. */
+
+CREATE TABLE review (
+    review_id INT(5) NOT NULL,
+    user_id INT(5) NOT NULL,
+    item_id INT(5) NOT NULL,
+    rating DECIMAL(4,2),
+    review_text TEXT,
+    
+    PRIMARY KEY(review_id),
+    FOREIGN KEY(user_id) REFERENCES nuser(user_id),
+    FOREIGN KEY(item_id) REFERENCES item(item_id)
+);
+
+/* creates a table with item_library as the entity name. Attributes include the item_library_id as a primary key, user_id and item_id as foreign key. In addition attributes include read_date. This table represents a many to many relationship between two entities. */
+
+CREATE TABLE item_library (
+    item_library_id INT(5) NOT NULL,
+    user_id INT(5) NOT NULL,
+    item_id INT(5) NOT NULL,
+    read_date DATETIME,
+
+    
+    PRIMARY KEY(item_library_id),
+    FOREIGN KEY(user_id) REFERENCES nuser(user_id),
+    FOREIGN KEY(item_id) REFERENCES item(item_id)
+);
+
+/* creates a table with user_review_author as the entity name. Attributes include the user_review_author_id as a primary key, user_id and author_names_id as foreign key. In addition attributes include author_rating and author_review_text. This table represents a many to many relationship between two entities. */
+
+CREATE TABLE user_review_author (
+    user_review_author_id INT(5) NOT NULL,
+    user_id INT(5) NOT NULL,
+    author_names_id INT(5) NOT NULL,
+    author_rating DECIMAL(4,2),
+    author_review_text TEXT,
+
+    
+    PRIMARY KEY(user_review_author_id),
+    FOREIGN KEY(user_id) REFERENCES nuser(user_id),
+    FOREIGN KEY(author_names_id) REFERENCES author(author_names_id)
+);
+
+

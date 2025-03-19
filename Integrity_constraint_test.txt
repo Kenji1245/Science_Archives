@@ -1,0 +1,15 @@
+/* Primary key constraint test*/
+
+INSERT INTO `nuser`(`user_id`, `first_name`, `middle_name`, `last_name`, `email`, `phone_no`, `contact_preference`, `username`, `password`) VALUES ('1','Ben','Long','Green','Bengreen66@gmail.com','08534234739','phone','longgg56','password555')
+
+/* Foreign key constraint test*/
+
+DELETE FROM item WHERE item_id = 1
+
+/* Not null constraint test */
+
+INSERT INTO `subject`(`subject_id`, `subject`) VALUES ('7',NULL)
+
+/* Unique constraint test */
+
+INSERT INTO `nuser`(`user_id`, `first_name`, `middle_name`, `last_name`, `email`, `phone_no`, `contact_preference`, `username`, `password`) VALUES ('7','Paul','Stone','Gilmore','stone99@gmail.com','07869123567','email','stone99','rock678');

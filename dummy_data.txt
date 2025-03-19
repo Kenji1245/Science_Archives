@@ -1,0 +1,218 @@
+/* dummy data for author table */
+
+INSERT INTO `author`(`author_names_id`, `author_first_name`, `author_last_name`) VALUES ('1','Hugo','Fernandes');
+INSERT INTO `author`(`author_names_id`, `author_first_name`, `author_last_name`) VALUES ('2','Vitor','Filipe');
+INSERT INTO `author`(`author_names_id`, `author_first_name`, `author_last_name`) VALUES ('3','Akif','Khan');
+INSERT INTO `author`(`author_names_id`, `author_first_name`, `author_last_name`) VALUES ('4','Shekhar','Saxena');
+INSERT INTO `author`(`author_names_id`, `author_first_name`, `author_last_name`) VALUES ('5','Andreas','Holzinger');
+INSERT INTO `author`(`author_names_id`, `author_first_name`, `author_last_name`) VALUES ('6','Alex','Allen');
+INSERT INTO `author`(`author_names_id`, `author_first_name`, `author_last_name`) VALUES ('7','Jack','Stowe');
+INSERT INTO `author`(`author_names_id`, `author_first_name`, `author_last_name`) VALUES ('8','Kenny','Wong');
+INSERT INTO `author`(`author_names_id`, `author_first_name`, `author_last_name`) VALUES ('9','Kevin','Long');
+INSERT INTO `author`(`author_names_id`, `author_first_name`, `author_last_name`) VALUES ('10','Sally','White');
+INSERT INTO `author`(`author_names_id`, `author_first_name`, `author_last_name`) VALUES ('11','Sam','Page');
+INSERT INTO `author`(`author_names_id`, `author_first_name`, `author_last_name`) VALUES ('12','Holly','Black')
+
+
+/* dummy data for editor table */
+
+INSERT INTO `editor`(`editor_names_id`, `editor_name`) VALUES ('1','Constantine.S');
+INSERT INTO `editor`(`editor_names_id`, `editor_name`) VALUES ('2','Margherita.A');
+INSERT INTO `editor`(`editor_names_id`, `editor_name`) VALUES ('3','kevin.W');
+INSERT INTO `editor`(`editor_names_id`, `editor_name`) VALUES ('4',' Kurt.Z');
+INSERT INTO `editor`(`editor_names_id`, `editor_name`) VALUES ('5',' Rob.J');
+INSERT INTO `editor`(`editor_names_id`, `editor_name`) VALUES ('6',' Sam.S');
+
+
+/* dummy data for user table */
+
+INSERT INTO `nuser`(`user_id`, `first_name`, `middle_name`, `last_name`, `email`, `phone_no`, `contact_preference`, `username`, `password`) VALUES ('1','Paul','Stone','Gilmore','stone99@gmail.com','07869123567','email','stone99','rock678');
+
+INSERT INTO `nuser`(`user_id`, `first_name`, `middle_name`, `last_name`, `email`, `phone_no`, `contact_preference`, `username`, `password`) VALUES ('2','Lydia','Maria','Rockwell','Lydia12345@gmail.com','07568832913','phone','Lydiasummy','bunny99');
+
+INSERT INTO `nuser`(`user_id`, `first_name`, `middle_name`, `last_name`, `email`, `phone_no`, `contact_preference`, `username`, `password`) VALUES ('3','Lin','Kin','Wong','Wonghong@gmail.com','07599435678','email','wong9989','password3456');
+
+INSERT INTO `nuser`(`user_id`, `first_name`, `middle_name`, `last_name`, `email`, `phone_no`, `contact_preference`, `username`, `password`) VALUES ('4','Mathew','Kin','water','Watersong@gmail.com','07745430578','phone','Water7789','passworrttyu6');
+
+INSERT INTO `nuser`(`user_id`, `first_name`, `middle_name`, `last_name`, `email`, `phone_no`, `contact_preference`, `username`, `password`) VALUES ('5','Joshua','Arm','Powers','boxerpower@gmail.com','04834876357','email','power6789','loma1234');
+
+INSERT INTO `nuser`(`user_id`, `first_name`, `middle_name`, `last_name`, `email`, `phone_no`, `contact_preference`, `username`, `password`) VALUES ('6','George','May','Wall','Rugbywall@gmail.com','08570237357','email','Wall9989','loma1234')
+
+
+/* dummy data for item table */
+
+INSERT INTO `item`(`item_id`, `publisher_name`, `publication_year`, `avg_score`,`hyperlink`) VALUES ('1','Springer.V','2017','50.45','https://link.springer.com/article/10.1007/s12193-016-0235-6','50.45','journal_article');
+
+INSERT INTO `item`(`item_id`, `publisher_name`, `publication_year`, `avg_score`, `hyperlink`) VALUES ('2','Shah.K','2020','45.90','https://link.springer.com/article/10.1007/s10209-020-00733-8','journal_article');
+
+INSERT INTO `item`(`item_id`, `publisher_name`, `publication_year`, `avg_score`, `hyperlink`) VALUES ('3','Organisation of Medicine','2023','95.50','https://www.scielosp.org/pdf/bwho/v82n11/v82n11a09.pdf','journal_article');
+
+INSERT INTO `item`(`item_id`, `publisher_name`, `publication_year`, `avg_score`, `hyperlink`) VALUES ('4','Society of AI','2015','95.50','https://www.scielosp.org/pdf/bwho/v82n11/v82n11a09.pdf','book');
+
+INSERT INTO `item`(`item_id`, `publisher_name`, `publication_year`, `avg_score`, `hyperlink`) VALUES ('5','Bright Mind Research','2017','95.50','https://www.scielosp.org/pdf/bwho/v82n11/v82n11a09.pdf','book');
+
+INSERT INTO `item`(`item_id`, `publisher_name`, `publication_year`, `avg_score`, `hyperlink`) VALUES ('6','OUP Oxford','2015','95.50','https://www.google.co.uk/books/edition/The_Oxford_Handbook_of_the_History_of_Me/6KJ0y_oSaAsC?hl=en&gbpv=0','book');
+
+INSERT INTO `item`(`item_id`, `publisher_name`, `publication_year`, `avg_score`, `hyperlink`) VALUES ('7','USA AI','2013','60.45','https://era.ed.ac.uk/handle/1842/41396','conference_paper');
+
+INSERT INTO `item`(`item_id`, `publisher_name`, `publication_year`, `avg_score`, `hyperlink`) VALUES ('8','UK Researcher','2015','95.50','https://era.ed.ac.uk/handle/1842/45656','conference_paper');
+
+INSERT INTO `item`(`item_id`, `publisher_name`, `publication_year`, `avg_score`, `hyperlink`) VALUES ('9','College of Research','2018','67.50','https://era.ed.ac.uk/handle/1842/767','conference_paper');
+
+INSERT INTO `item`(`item_id`, `publisher_name`, `publication_year`, `avg_score`, `hyperlink`) VALUES ('10','Economy of Power','2015','13.50','https://era.ed.ac.uk/handle/1842/4757','thesis');
+
+INSERT INTO `item`(`item_id`, `publisher_name`, `publication_year`, `avg_score`, `hyperlink`) VALUES ('11','Fallguy society','2009','65.50','https://era.ed.ac.uk/handle/1842/45656','thesis');
+
+INSERT INTO `item`(`item_id`, `publisher_name`, `publication_year`, `avg_score`, `hyperlink`) VALUES ('12','Constellation','2019','34.50','https://era.ed.ac.uk/handle/1842/46767','thesis')
+
+
+/* dummy data for journal article table */
+
+INSERT INTO `journal_article`(`item_id`, `journal_article_title`, `journal_title`, `article_first_page_number`, `article_last_page_number`, `volume_number`,`journal_article_abstract`) VALUES ('1','General data on the visually impaired','Universal Access in the Information Society','155','168','18','From the most recent data the magnitude of visual impairment and its causes in 2010 have been estimated, globally and by WHO region. The definitions of visual impairment are the current definitions of presenting vision in the International Classification of Diseases version 10.');
+
+INSERT INTO `journal_article`(`item_id`, `journal_article_title`, `journal_title`, `article_first_page_number`, `article_last_page_number`, `volume_number`,`journal_article_abstract`) VALUES ('2','Various medicine for the visually impaired','BMJ Journal of Opthalmology','265','298','20','This paper presents estimates of the prevalence of visual impairment and its causes in 2002, based on the best available
+evidence derived from recent studies. Estimates were determined from data on low vision and blindness as defined in the International
+statistical classification of diseases, injuries and causes of death, 10th revision. The number of people with visual impairment worldwide
+in 2002 was in excess of 161 million, of whom about 37 million were blind.');
+
+INSERT INTO `journal_article`(`item_id`, `journal_article_title`, `journal_title`, `article_first_page_number`, `article_last_page_number`, `volume_number`,`journal_article_abstract`) VALUES ('3','Causability and explainability of artificial intelligence in medicine','Wire Data Mining and knowledge discovery','121','140','9','The study of understanding and constructing intelligent machines that are human-like (or more intelligent than humans). Simulation of AI approaches should be classified as emulation of human brains.')
+
+/* dummy data for book table */
+
+INSERT INTO `book`(`item_id`, `book_title`, `series_title`, `edition`, `publication_place`, `series_number`,`book_abstract`) VALUES ('4','Artificial Intelligence','World of AI','revised edition','Geneva','3','Artificial intelligence-based information and modeling methods give an insight into prevalent diseases and the reasons behind their spread. On the basis of such insights, preventive actions can be taken to suppress the effects of such contagious diseases. This is a prominent application of artificial intelligence that is being used to help humankind to reduce the effects of such communicable diseases. ')
+
+INSERT INTO `book`(`item_id`, `book_title`, `series_title`, `edition`, `publication_place`, `series_number`,`book_abstract`) VALUES ('5','Mental Health Atlas','World of Mental Health','3rd edition','United Kingdom','1','In 2013, the WHO launched the Mental Health Action Plan 2013-2020, designed to guide national initiatives in all countries with the aim of addressing worldwide unmet need for mental health promotion, prevention, and intervention.')
+
+INSERT INTO `book`(`item_id`, `book_title`, `series_title`, `edition`, `publication_place`, `series_number`,`book_abstract`) VALUES ('5','The Oxford Handbook of the History of Medicine','Medicine and the World','6rd edition','United Kingdom','1','Following proposals in 1987 and 1988, several medical journals have provided more informative abstracts ("structured abstracts") for articles of clinical interest. Structured abstracts for original studies require authors to systematically disclose the objective, basic research design, clinical setting, participants, interventions (if any), main outcome measurements, results, and conclusions')
+
+
+/* dummy data for Conference Paper table */
+
+INSERT INTO `conference_paper`(`item_id`, `conference_paper_title`, `conference_title`, `publication_place`, `page_number`, `conference_paper_abtract`) VALUES ('7','Youth understanding of online privacy and security','Computer security resource center','USA','399','With youth increasingly accessing and using the internet, it is important to understand what they know about online privacy and security (OPS), and from where they gain this knowledge in order to best support their learning and online practices.');
+
+INSERT INTO `conference_paper`(`item_id`, `conference_paper_title`, `conference_title`, `publication_place`, `page_number`, `conference_paper_abtract`) VALUES ('8','Identifying people with cancer','Medicine research center','USA','89','In the domain of chronic disease monitoring, continuous time-series vital sign data (such as blood pressure) can be collected through low-cost wearable devices. Approximately 300 million people have chronic kidney disease globally. These patients undergo multiple haemodialysis sessions per week.');
+
+INSERT INTO `conference_paper`(`item_id`, `conference_paper_title`, `conference_title`, `publication_place`, `page_number`, `conference_paper_abtract`) VALUES ('9','Bayesian Gaussian Processes for Identifying the Deteriorating Patient','Department of Science','UK','234','The step-down unit (SDU) is a high-acuity hospital environment, to which patients may be sent after discharge from the intensive care unit (ICU). About 1- in-7 patients will deteriorate in the SDU and require emergency readmission to the ICU.')
+
+
+/* dummy data for thesis table */
+
+INSERT INTO `thesis`(`item_id`, `thesis_title`, `type_of_thesis`, `academic_institution`, `thesis_abtract`) VALUES ('10','The implementation of artificial intelligence and its future potential','Research thesis','University of Nottingham','Technology has geometrically progressed during the last few decades, and subsequently artificial intelligence (AI) research reached new peaks. Today, AI plays a sizeable role across many economic sectors throughout the world.');
+
+INSERT INTO `thesis`(`item_id`, `thesis_title`, `type_of_thesis`, `academic_institution`, `thesis_abtract`) VALUES ('11','Developmental pathways of suicidality and self-harm among youth','Analytical thesis','Harvard','Suicidality and self-harm among youth are significant public health concerns. This thesis seeks to elucidate the developmental pathways and predictors underpinning these issues, with a particular emphasis on the roles of bullying victimisation (or peer victimisation), parental mental health, youth problem behaviours, and screen time use.');
+
+INSERT INTO `thesis`(`item_id`, `thesis_title`, `type_of_thesis`, `academic_institution`, `thesis_abtract`) VALUES ('12','Discovery of genetic factors for reading ability and dyslexia
+','Research thesis','University of Edinburgh','The ability to read is critical to access wider learning and achieve qualifications, for accessing employment, and for adult life skills. Approximately one in ten individuals are affected by dyslexia, a learning difficulty which primarily impacts word reading and spelling.')
+
+
+/* dummy data for subject table */
+
+INSERT INTO `subject`(`subject_id`, `subject`) VALUES ('1','visual impairment');
+INSERT INTO `subject`(`subject_id`, `subject`) VALUES ('2','Mental Health');
+INSERT INTO `subject`(`subject_id`, `subject`) VALUES ('3','medicine');
+INSERT INTO `subject`(`subject_id`, `subject`) VALUES ('4','artificial intelligence');
+INSERT INTO `subject`(`subject_id`, `subject`) VALUES ('5','cyber security')
+
+
+/* dummy data for author item table */
+
+INSERT INTO `author_item`(`author_item_id`, `author_names_id`, `item_id`) VALUES ('1','1','1');
+INSERT INTO `author_item`(`author_item_id`, `author_names_id`, `item_id`) VALUES ('2','1','2');
+INSERT INTO `author_item`(`author_item_id`, `author_names_id`, `item_id`) VALUES ('3','2','3');
+INSERT INTO `author_item`(`author_item_id`, `author_names_id`, `item_id`) VALUES ('4','2','4');
+INSERT INTO `author_item`(`author_item_id`, `author_names_id`, `item_id`) VALUES ('5','3','5');
+INSERT INTO `author_item`(`author_item_id`, `author_names_id`, `item_id`) VALUES ('6','4','6');
+INSERT INTO `author_item`(`author_item_id`, `author_names_id`, `item_id`) VALUES ('7','5','7');
+INSERT INTO `author_item`(`author_item_id`, `author_names_id`, `item_id`) VALUES ('8','6','8');
+INSERT INTO `author_item`(`author_item_id`, `author_names_id`, `item_id`) VALUES ('9','7','9');
+INSERT INTO `author_item`(`author_item_id`, `author_names_id`, `item_id`) VALUES ('10','8','10');
+INSERT INTO `author_item`(`author_item_id`, `author_names_id`, `item_id`) VALUES ('11','9','11');
+INSERT INTO `author_item`(`author_item_id`, `author_names_id`, `item_id`) VALUES ('12','10','12');
+INSERT INTO `author_item`(`author_item_id`, `author_names_id`, `item_id`) VALUES ('13','11','12');
+INSERT INTO `author_item`(`author_item_id`, `author_names_id`, `item_id`) VALUES ('14','12','12')
+
+
+/* dummy data for user subject interest table */
+
+INSERT INTO `user_subject_interest`(`user_subject_interest_id`, `user_id`, `subject_id`) VALUES ('1','1','1');
+INSERT INTO `user_subject_interest`(`user_subject_interest_id`, `user_id`, `subject_id`) VALUES ('2','1','3');
+INSERT INTO `user_subject_interest`(`user_subject_interest_id`, `user_id`, `subject_id`) VALUES ('3','2','2');
+INSERT INTO `user_subject_interest`(`user_subject_interest_id`, `user_id`, `subject_id`) VALUES ('4','2','3');
+INSERT INTO `user_subject_interest`(`user_subject_interest_id`, `user_id`, `subject_id`) VALUES ('5','3','4');
+INSERT INTO `user_subject_interest`(`user_subject_interest_id`, `user_id`, `subject_id`) VALUES ('6','3','5');
+INSERT INTO `user_subject_interest`(`user_subject_interest_id`, `user_id`, `subject_id`) VALUES ('7','4','3');
+INSERT INTO `user_subject_interest`(`user_subject_interest_id`, `user_id`, `subject_id`) VALUES ('8','5','4');
+INSERT INTO `user_subject_interest`(`user_subject_interest_id`, `user_id`, `subject_id`) VALUES ('9','5','5');
+INSERT INTO `user_subject_interest`(`user_subject_interest_id`, `user_id`, `subject_id`) VALUES ('10','6','5');
+
+
+/* dummy data for item library table */
+
+INSERT INTO `item_library`(`item_library_id`, `user_id`, `item_id`, `read_date`) VALUES ('1','1','1','2020/04/21');
+INSERT INTO `item_library`(`item_library_id`, `user_id`, `item_id`, `read_date`) VALUES ('2','1','2','2021/09/22');
+INSERT INTO `item_library`(`item_library_id`, `user_id`, `item_id`, `read_date`) VALUES ('3','1','6','2024/01/21');
+INSERT INTO `item_library`(`item_library_id`, `user_id`, `item_id`, `read_date`) VALUES ('4','1','8','2020/04/21');
+INSERT INTO `item_library`(`item_library_id`, `user_id`, `item_id`, `read_date`) VALUES ('5','1','9','2022/04/21');
+INSERT INTO `item_library`(`item_library_id`, `user_id`, `item_id`, `read_date`) VALUES ('6','1','11','2023/06/21');
+INSERT INTO `item_library`(`item_library_id`, `user_id`, `item_id`, `read_date`) VALUES ('7','1','12','2021/08/23');
+INSERT INTO `item_library`(`item_library_id`, `user_id`, `item_id`, `read_date`) VALUES ('8','2','5','2020/08/10');
+INSERT INTO `item_library`(`item_library_id`, `user_id`, `item_id`, `read_date`) VALUES ('9','2','11','2019/05/23');
+INSERT INTO `item_library`(`item_library_id`, `user_id`, `item_id`, `read_date`) VALUES ('10','3','3','2023/08/10');
+INSERT INTO `item_library`(`item_library_id`, `user_id`, `item_id`, `read_date`) VALUES ('11','3','4','2020/01/23');
+INSERT INTO `item_library`(`item_library_id`, `user_id`, `item_id`, `read_date`) VALUES ('12','3','10','2020/01/10');
+INSERT INTO `item_library`(`item_library_id`, `user_id`, `item_id`, `read_date`) VALUES ('13','4','12','2021/02/10');
+INSERT INTO `item_library`(`item_library_id`, `user_id`, `item_id`, `read_date`) VALUES ('14','5','10','2020/12/10');
+INSERT INTO `item_library`(`item_library_id`, `user_id`, `item_id`, `read_date`) VALUES ('15','6','10','2022/05/10');
+
+
+/* dummy data for subject item relation table */
+
+INSERT INTO `subject_item_relation`(`subject_item_relation_id`, `subject_id`, `item_id`) VALUES ('1','1','1');
+INSERT INTO `subject_item_relation`(`subject_item_relation_id`, `subject_id`, `item_id`) VALUES ('2','3','2');
+INSERT INTO `subject_item_relation`(`subject_item_relation_id`, `subject_id`, `item_id`) VALUES ('3','4','3');
+INSERT INTO `subject_item_relation`(`subject_item_relation_id`, `subject_id`, `item_id`) VALUES ('4','4','4');
+INSERT INTO `subject_item_relation`(`subject_item_relation_id`, `subject_id`, `item_id`) VALUES ('5','2','5');
+INSERT INTO `subject_item_relation`(`subject_item_relation_id`, `subject_id`, `item_id`) VALUES ('6','3','6');
+INSERT INTO `subject_item_relation`(`subject_item_relation_id`, `subject_id`, `item_id`) VALUES ('7','5','7');
+INSERT INTO `subject_item_relation`(`subject_item_relation_id`, `subject_id`, `item_id`) VALUES ('8','3','8');
+INSERT INTO `subject_item_relation`(`subject_item_relation_id`, `subject_id`, `item_id`) VALUES ('9','3','9');
+INSERT INTO `subject_item_relation`(`subject_item_relation_id`, `subject_id`, `item_id`) VALUES ('10','4','10');
+INSERT INTO `subject_item_relation`(`subject_item_relation_id`, `subject_id`, `item_id`) VALUES ('11','2','11');
+INSERT INTO `subject_item_relation`(`subject_item_relation_id`, `subject_id`, `item_id`) VALUES ('12','3','12');
+INSERT INTO `subject_item_relation`(`subject_item_relation_id`, `subject_id`, `item_id`) VALUES ('13','4','2');
+INSERT INTO `subject_item_relation`(`subject_item_relation_id`, `subject_id`, `item_id`) VALUES ('14','5','10');
+INSERT INTO `subject_item_relation`(`subject_item_relation_id`, `subject_id`, `item_id`) VALUES ('15','3','11');
+
+
+/* dummy data for review table */
+
+INSERT INTO `review`(`review_id`, `user_id`, `item_id`, `rating`, `review_text`) VALUES ('1','1','1','80.70','The article was an ok read.');
+INSERT INTO `review`(`review_id`, `user_id`, `item_id`, `rating`, `review_text`) VALUES ('2','2','5','55.00','This paper give me alot of information');
+INSERT INTO `review`(`review_id`, `user_id`, `item_id`, `rating`, `review_text`) VALUES ('3','6','10','70.80','The Thesis give me a new insight on medicine')
+
+
+/* dummy data for editor item table */
+
+INSERT INTO `editor_item`(`editor_item_id`, `item_id`, `editor_names_id`) VALUES ('1','1','1');
+INSERT INTO `editor_item`(`editor_item_id`, `item_id`, `editor_names_id`) VALUES ('2','2','2');
+INSERT INTO `editor_item`(`editor_item_id`, `item_id`, `editor_names_id`) VALUES ('3','3','3');
+INSERT INTO `editor_item`(`editor_item_id`, `item_id`, `editor_names_id`) VALUES ('4','4','4');
+INSERT INTO `editor_item`(`editor_item_id`, `item_id`, `editor_names_id`) VALUES ('5','5','5');
+INSERT INTO `editor_item`(`editor_item_id`, `item_id`, `editor_names_id`) VALUES ('6','6','6');
+INSERT INTO `editor_item`(`editor_item_id`, `item_id`, `editor_names_id`) VALUES ('7','7','7');
+INSERT INTO `editor_item`(`editor_item_id`, `item_id`, `editor_names_id`) VALUES ('8','8','8');
+INSERT INTO `editor_item`(`editor_item_id`, `item_id`, `editor_names_id`) VALUES ('9','9','9');
+INSERT INTO `editor_item`(`editor_item_id`, `item_id`, `editor_names_id`) VALUES ('10','10','10');
+INSERT INTO `editor_item`(`editor_item_id`, `item_id`, `editor_names_id`) VALUES ('11','11','11');
+INSERT INTO `editor_item`(`editor_item_id`, `item_id`, `editor_names_id`) VALUES ('12','12','12')
+
+
+/* dummy data for user review author table */
+
+INSERT INTO `user_review_author`(`user_review_author_id`, `user_id`, `author_names_id`, `author_rating`, `author_review_text`) VALUES ('1','1','1','12.00','bad');
+INSERT INTO `user_review_author`(`user_review_author_id`, `user_id`, `author_names_id`, `author_rating`, `author_review_text`) VALUES ('2','2','2','11.00','awful');
+INSERT INTO `user_review_author`(`user_review_author_id`, `user_id`, `author_names_id`, `author_rating`, `author_review_text`) VALUES ('3','3','3','50.00','average');
+INSERT INTO `user_review_author`(`user_review_author_id`, `user_id`, `author_names_id`, `author_rating`, `author_review_text`) VALUES ('4','4','4','90.00','almost perfect');
+INSERT INTO `user_review_author`(`user_review_author_id`, `user_id`, `author_names_id`, `author_rating`, `author_review_text`) VALUES ('5','1','2','13.00','not good');
+INSERT INTO `user_review_author`(`user_review_author_id`, `user_id`, `author_names_id`, `author_rating`, `author_review_text`) VALUES ('6','1','3','12.00','not great')
+
