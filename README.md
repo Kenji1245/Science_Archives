@@ -1,5 +1,5 @@
 # Science_Archives
-Science Archives is an SQL database that is designed to hold various science archives within the database. This includes books, conference papers, thesis, and journal articles. The Bdatabase also hold additional information including the names of authors, information about the users, reviews, editors, subjects, items and library.
+Science Archives is an SQL database that is designed to hold various science archives within the database. This includes books, conference papers, thesis, and journal articles. The database also hold additional information including the names of authors, information about the users, reviews, editors, subjects, items and library.
 
 ## Books stored within the database
 ![image](https://github.com/user-attachments/assets/94b88cdf-7a39-48e9-b6f2-4157dc4188ef)
