@@ -46,7 +46,7 @@ The editor entity accommodates several editors responsible for editing the item.
 ## Reviews stored within database
 ![image](https://github.com/user-attachments/assets/5506b769-d93f-4687-841c-ecc7dea97e33)
 
-# 4.Relationship between Entities
+# 4. Relationship between Entities
 Entities have relationships between themselves which shows how they interact.
 Relationships can range from one-to-one, one-to-many, many-to-one and many-to-many.
 This section will highlight the relationships between selected entities and why the type of
@@ -72,4 +72,10 @@ Every item contains an author or multiple authors. In addition, an author can wr
 
 ## Relationship between item and editor
 Every item can have an editor or many editors. Furthermore, an editor can edit many items, while an item can have many editors. This shows a many-to-many relationship between the two entities. Each entity and their attributes were determined by the information acquired from the client’s specification in order to achieve the system’s functionality. The database and its relational schema was examined and improved by using the process of normalisation. This is done to eliminate redundant data, reduce data modification errors, and to simplify the query process. In addition, various data types and constraints were used for each attribute to promote data integrity and assist in queries. For example, the data type for INT was used for entity ID to ensure the cell contains only numbers. While DECIMAL data type is used to show the percentage of the average score for an item. The primary key was used to identify each record within the table, while the foreign key was used to establish the relationship between each table. In conclusion, the relational schema ensures that the database fulfils the requirement for the clients specification.
+
+# 5. SQL Querying 
+
+![image](https://github.com/user-attachments/assets/52e1524e-9b82-4bfe-9885-4e6535333f02)
+Users can search for items based on publication type, the image shown above shows querying done to show only thesis type items.
+
 
