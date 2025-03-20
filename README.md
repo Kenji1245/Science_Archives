@@ -1,11 +1,11 @@
 # Science_Archives
-## Introduction
+## 1.Introduction
 Science Archives is an SQL database that is designed to hold various science archives within the database. This includes books, conference papers, thesis, and journal articles. The database also hold additional information including the names of authors, information about the users, reviews, editors, subjects, items and library.
 
-## Tools used
+## 2.Tools used
 phpMyAdmin was used to create the SQL database to store information. 
 
-# Entities
+# 3.Entities
 ## list of users stored within database
 ![image](https://github.com/user-attachments/assets/208c4c45-5091-44fe-aa70-88f2d3e85c5e)
 The user entity contains user's id, full name (first name, middle name and last name), email, phone, contact preference, username, password, capacity and author name. The user id acts as a primary key and the user's full name establishes the user's identity. The email and phone attributes contain information on how the user can be contacted, as well as their contact preference. A username and password is also contained within the entity and their capacity, which identifies if the user is a reader, author or both. The user entity is also connected to the author entity, establishing a one-to-one relationship if the user is one of the authors that has written an item (conference paper, thesis, book, article). These attributes satisfy the client’s specifications.
@@ -44,18 +44,16 @@ The editor entity accommodates several editors responsible for editing the item.
 ## Reviews stored within database
 ![image](https://github.com/user-attachments/assets/5506b769-d93f-4687-841c-ecc7dea97e33)
 
-# Relationships between Entities
+# 4.Relationship between Entities
+Entities have relationships between themselves which shows how they interact.
+Relationships can range from one-to-one, one-to-many, many-to-one and many-to-many.
+This section will highlight the relationships between selected entities and why the type of
+relationship was chosen between the two shown on the diagram (figure 1).
 
 ## Science Archives Relational Schema (Figure 1)
 ![image](https://github.com/user-attachments/assets/25b3cd2b-8a1d-4257-beaf-5fd466eceb16)
 The image above shows the relation schema of Science Archives. It represents the relationship between its main entities, which includes the user, items, journal articles, books, conference paper, thesis, author, subject, and editor. Each entity contains attributes which further reveal information and its complexity. These entities are connected by various types of relationships such as one-to-one, one-to-many,many-to-one and many-to-many. 
 
-## Relationship between entities
-Entities have relationships between themselves which shows how they interact.
-Relationships can range from one-to-one, one-to-many, many-to-one and many-to-many.
-This section will highlight the relationships between selected entities and why the type of
-relationship was chosen between the two shown on the diagram (figure 1).
- 
 ## Relationship between user and subject
 According to the client specification, users will have a scientific interest within a certain subject or multiple subjects. An entity based on user and subject is created and a many-to-many relationship is established, as shown on the
 diagram (figure 1). This is due to the fact that the database can contain multiple users and subjects. In addition, each user can be interested in multiple subjects and each subject can be interested by multiple users. As a result, a table known as user_subject_interest is created in order to establish the many-to-many relationship between the two entities.
