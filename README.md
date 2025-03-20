@@ -2,6 +2,8 @@
 # 1.Introduction
 Science Archives is an SQL database that is designed to hold various science archives within the database. This includes books, conference papers, thesis, and journal articles. The database also hold additional information including the names of authors, information about the users, reviews, editors, subjects, items and library.
 
+In addition, by inputting SQL querying, users can interact with the system and view certain aspects of the database, this will be explained further down the page.
+
 # 2.Tools used
 phpMyAdmin was used to create the SQL database to store information. 
 
