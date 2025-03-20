@@ -32,14 +32,17 @@ The item entity contains attribute item id, avg score, publisher name, publicati
 
 ## Subjects stored within the database
 ![image](https://github.com/user-attachments/assets/a4182bf6-2cb7-4021-bd2d-6707eea8d17d)
+
 The subject entity holds numerous subjects that the user is interested in and the item is related to.
 
 ## Names of authors stored within the database
 ![image](https://github.com/user-attachments/assets/4bb8d45c-1352-46d9-95c2-5fd4192969b4)
+
 The author entity contains various authors who were responsible for creating the item.
 
 ## Names of editors stored within the database
 ![image](https://github.com/user-attachments/assets/10e8338d-ec1f-4f35-ab8c-f0436d63563c)
+
 The editor entity accommodates several editors responsible for editing the item.
 
 ## Reviews stored within database
