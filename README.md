@@ -75,7 +75,29 @@ Every item can have an editor or many editors. Furthermore, an editor can edit m
 
 # 5. SQL Querying 
 
+## List of thesis
 ![image](https://github.com/user-attachments/assets/52e1524e-9b82-4bfe-9885-4e6535333f02)
+
 Users can search for items based on publication type, the image shown above shows querying done to show only thesis type items.
+
+## List of thesis with hyperlink
+![image](https://github.com/user-attachments/assets/c45a077a-96bb-40b1-8130-ff78077c233b)
+
+Users can view more detailed information on items (thesis, conference paper, articles and book), such as year of publication, average score, hyperlink on item, item abstract, associated subject and publication type which is shown on figure 4.
+
+## Journal articles to users based on their scientific interest.
+![image](https://github.com/user-attachments/assets/d1dc8a53-fd18-40bb-851e-62c8f4536436)
+
+ Users can see items based on their scientific interest. The image shows what subject the articles talk about.
+
+ ## author rating in descending order
+
+ ![image](https://github.com/user-attachments/assets/74328a41-c593-4cf7-9ed5-63b2c7e197ff)
+
+ Users can view author ratings shown on the database in descending order. 
+
+
+
+
 
 
