@@ -5,10 +5,6 @@ Science Archives is an SQL database that is designed to hold various science arc
 ## Tools used
 phpMyAdmin was used to create the SQL database to store information. 
 
-## Science Archives Relational Schema 
-![image](https://github.com/user-attachments/assets/25b3cd2b-8a1d-4257-beaf-5fd466eceb16)
-The image above shows the relation schema of Science Archives. It represents the relationship between its main entities, which includes the user, items, journal articles, books, conference paper, thesis, author, subject, and editor. Each entity contains attributes which further reveal information and its complexity. These entities are connected by various types of relationships such as one-to-one, one-to-many,many-to-one and many-to-many. 
-
 # Entities
 ## list of users stored within database
 ![image](https://github.com/user-attachments/assets/208c4c45-5091-44fe-aa70-88f2d3e85c5e)
@@ -47,4 +43,8 @@ The editor entity accommodates several editors responsible for editing the item.
 
 ## Reviews stored within database
 ![image](https://github.com/user-attachments/assets/5506b769-d93f-4687-841c-ecc7dea97e33)
+
+## Science Archives Relational Schema 
+![image](https://github.com/user-attachments/assets/25b3cd2b-8a1d-4257-beaf-5fd466eceb16)
+The image above shows the relation schema of Science Archives. It represents the relationship between its main entities, which includes the user, items, journal articles, books, conference paper, thesis, author, subject, and editor. Each entity contains attributes which further reveal information and its complexity. These entities are connected by various types of relationships such as one-to-one, one-to-many,many-to-one and many-to-many. 
 
