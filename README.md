@@ -44,7 +44,30 @@ The editor entity accommodates several editors responsible for editing the item.
 ## Reviews stored within database
 ![image](https://github.com/user-attachments/assets/5506b769-d93f-4687-841c-ecc7dea97e33)
 
-## Science Archives Relational Schema 
+## Science Archives Relational Schema (Figure 1)
 ![image](https://github.com/user-attachments/assets/25b3cd2b-8a1d-4257-beaf-5fd466eceb16)
 The image above shows the relation schema of Science Archives. It represents the relationship between its main entities, which includes the user, items, journal articles, books, conference paper, thesis, author, subject, and editor. Each entity contains attributes which further reveal information and its complexity. These entities are connected by various types of relationships such as one-to-one, one-to-many,many-to-one and many-to-many. 
+
+## Relationship between entities
+Entities have relationships between themselves which shows how they interact.
+Relationships can range from one-to-one, one-to-many, many-to-one and many-to-many.
+This section will highlight the relationships between selected entities and why the type of
+relationship was chosen between the two shown on the diagram (figure 1).
+ 
+## Relationship between user and subject
+According to the client specification, users will have a scientific interest within a certain subject or multiple subjects. An entity based on user and subject is created and a many-to-many relationship is established, as shown on the
+diagram (figure 1). This is due to the fact that the database can contain multiple users and subjects. In addition, each user can be interested in multiple subjects and each subject can be interested by multiple users. As a result, a table known as user_subject_interest is created in order to establish the many-to-many relationship between the two entities.
+ 
+## Relationship between user and item : 
+The diagram (figure 1) shows that each user is able to review and read each item. As the database can contain many items, each can be read and reviewed by many users. A review and library entity is therefore created to connect the user and item entity together, establishing a many-to-many relationship. The attributes within the review entity allows users to rate and write a review on the items that they have read and the library attribute keeps track of these items and the date in which the item is read.
+
+## Relationship between user and subject
+A relationship between user and subject is established to connect the user to a single or various subjects that they are interested in. In addition, a subject can intrigue many users, creating a many-to-many relationship.
+Relationship between item and subject : Each item in the item entity is related to a or several subjects within the subject entity. An entity called item_subject_relation is created to show the relationship between the two entities, which is a many-to-many relationship. Since an item can be related to many or one subject and a subject can be connected to many items.
+
+## Relationship between item and author
+Every item contains an author or multiple authors. In addition, an author can write many items and an item can be written by many authors. A many-to-many relationship is established because of this. Relationship between item and editor : Every item can have an editor or many editors. Furthermore, an editor can edit many items, while an item can have many editors. This shows a many-to-many relationship between the two entities. Each entity and their attributes were determined by the information acquired from the client’s specification in order to achieve the system’s functionality. The database and its relational schema was examined and improved by using the process of normalisation. This is done to eliminate redundant data, reduce data modification errors, and to simplify the query process. In addition, various data types and constraints were used for each attribute to promote data integrity and assist in queries. For example, the data type for INT was used for entity ID to ensure the cell contains only numbers. While DECIMAL data type is used to show the percentage of the average score for an item. The primary key was used to identify each record within the table, while the foreign key was used to establish the relationship between each table. In conclusion, the relational schema ensures that the database fulfils the requirement for the clients specification.
+
+## Relationship between item and editor : Every item can have an editor or many editors.
+Furthermore, an editor can edit many items, while an item can have many editors. This shows a many-to-many relationship between the two entities. Each entity and their attributes were determined by the information acquired from the client’s specification in order to achieve the system’s functionality. The database and its relational schema was examined and improved by using the process of normalisation. This is done to eliminate redundant data, reduce data modification errors, and to simplify the query process. In addition, various data types and constraints were used for each attribute to promote data integrity and assist in queries. For example, the data type for INT was used for entity ID to ensure the cell contains only numbers. While DECIMAL data type is used to show the percentage of the average score for an item. The primary key was used to identify each record within the table, while the foreign key was used to establish the relationship between each table. In conclusion, the relational schema ensures that the database fulfils the requirement for the clients specification.
 
