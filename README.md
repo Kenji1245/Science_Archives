@@ -22,6 +22,11 @@ The image above shows the relation schema of Science Archives. It represents the
 ## Thesis stored within the database
 ![image](https://github.com/user-attachments/assets/c2b086cb-bc88-4486-94cb-8b497e99f030)
 
+## Items stored within the database
+![image](https://github.com/user-attachments/assets/75971068-92c0-4e25-afd3-31d466badf91)
+The item entity contains attribute item id, avg score, publisher name, publication year, publication type, hyperlink and abstract. The item id acts as a primary key. The column avg score shows the average score which rates the paper based percentage. The publisher name shows the name of the individual who published the paper and the column publication year shows the year in which the item has been published. The entity also contains the column called publication_type which reveals the type of publication of the item. This can range between journal articles, books, thesis or conference papers. Due to the various types of publication, four entities have been created which connect to the item entity. These entities are thesis, book, conference paper and journal article. When an item is added onto the database, information is also inputted into one of these tables which establishes their type of publication. Each publication type has different attributes, and various entities were created to suit each one. For example, a conference paper is related to the name of the conference but a book is not involved in a conference but instead contains a book publication place. An item can be stored within the entity item and the entity journal article if the item itself is an article from a journal, both containing the same item id and are therefore connected. The same can be done if the item were a different publication type, such as if the item were a book or a thesis. This fulfils the requirement of the database being capable of containing items of different types of publication based on the client specification.
+
+
 ## Names of authors stored within the database
 ![image](https://github.com/user-attachments/assets/4bb8d45c-1352-46d9-95c2-5fd4192969b4)
 
